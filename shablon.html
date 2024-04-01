@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>ItcSlider - Example 05</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="itc-slider.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8abed6b128.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="05.css" />
+    <link
+      href="/examples/libs/ui-components/itc-slider/itc-slider.css"
+      rel="stylesheet"
+    />
+    <script
+      src="/examples/libs/ui-components/itc-slider/itc-slider.js"
+      defer
+    ></script>
+    <script defer src="itc-slider.js"></script>
+    <script defer src="theme.js"></script>
+    <script defer src="im.js"></script>
+  </head>
+
+  <body>
+    <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="eye" viewBox="0 0 16 16">
+        <path
+          d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+        />
+        <path
+          d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+        />
+      </symbol>
+    </svg>
+
+    <nav class="navbar">
+      <div class="content">
+         
+        <div class="logo">
+          <a href="#"><img src="logo.png" alt="Кнопка" /></a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn"
+                >Сведения об образовательной организации</a
+              >
+              <div class="dropdown-content">
+                <a href="#">Основные сведения</a>
+                <a href="#"
+                  >Структура и органы управления образовательной организацией</a
+                >
+                <a href="#">Документы</a> <a href="#">Образование</a>
+                <a href="#">Образовательные стандарты и требования</a>
+                <a href="#"
+                  >Руководство. Педагогический (научно-пегагогический) состав</a
+                >
+                <a href="#"
+                  >Материально-техническое обеспечение и оснащенность
+                  образовательного процесса</a
+                >
+                <a href="#">Стипендии и меры поддержки обучающихся</a>
+                <a href="#">Платные образовательные услуги</a>
+                <a href="#">Финансово - хозяйственная деятельность</a>
+                <a href="#"
+                  >Вакантные места для приема (перевода) обучающихся</a
+                >
+                <a href="#">Доступная среда</a
+                ><a href="#">Международное сотрудничество</a>
+              </div>
+            </li>
+          </div>
+
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn"> Поступающим</a>
+              <div class="dropdown-content">
+                <a href="#">Перечень программ</a>
+                <a href="#">Перечень программ ФП "Профессионалитет"</a>
+                <a href="#">Приемная комиссия НАМТ</a>
+              </div>
+            </li>
+          </div>
+          <li><a href="#">Студентам и педагогам</a></li>
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn">Мероприятия</a>
+              <div class="dropdown-content">
+                <a href="#">Воспитательная работа</a>
+                <a href="#">Дополнительное образование</a>
+                <a href="#">Студенческий спортивный клуб</a>
+                <a href="#">Конкурсы профессионального мастерства</a>
+              </div>
+            </li>
+          </div>
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn">Пресс-служба</a>
+              <div class="dropdown-content">
+                <a href="#">Контакты</a>
+                <a href="#">Форма обращения</a>
+                <a href="#">Вопросы и ответы</a>
+              </div>
+            </li>
+          </div>
+          
+        </ul>
+       <button id='next' class="themes" >Смена темы       </button>   
+    
+
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+       
+      </div>
+         
+    </nav>
+    
+  
+   
+   
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = () => {
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      };
+      cancelBtn.onclick = () => {
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      };
+      window.onscroll = () => {
+        this.scrollY > 0
+          ? navbar.classList.add("sticky")
+          : navbar.classList.remove("sticky");
+      };
+    </script>
+    <script>
+      $("#sponsor-carousel").carousel({
+        interval: 3000,
+        cycle: true,
+      });
+    </script>
+   
+ 
+
+  
+</figure>
+
+    <footer>
+      <div class="footer">
+        <div class="row">
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-vk"></i></a>
+        </div>
+
+        <div class="row">
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Приемная комиссия</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Как добраться</a></li>
+            <li><a href="#">Создатели </a></li>
+          </ul>
+        </div>
+
+        <div class="row">© 2024 НАМТ</div>
+      </div>
+    </footer>
+  </body>
+</html>
