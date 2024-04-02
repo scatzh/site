@@ -1,0 +1,515 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.themes {
+  height: 30px;
+  border-radius: 30px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+html.light {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+}
+html.dark {
+  --color-text: #ffffff;
+  --color-bg: #1c1c1c;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.container {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 710px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+.itc-slider {
+  overflow: hidden;
+  padding-bottom: 35px;
+}
+
+.itc-slider-wrapper {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+@media (min-width: 768px) {
+  .itc-slider-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .itc-slider-item {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+}
+
+.card {
+  background-color: var(--color-bg);
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-header {
+  position: relative;
+}
+
+.card-img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.card-section {
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-bg);
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 12px;
+  line-height: 1;
+}
+
+.card-title {
+  background: var(--color-bg);
+  color: var(--color-text);
+  white-space: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  padding: 10px 15px;
+  margin: 0;
+  height: 72px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--color-bg);
+  padding: 10px 15px 15px;
+  color: var(--color-text);
+}
+
+.card-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card-author {
+  margin-left: 6px;
+}
+
+.card-icon {
+  margin-left: auto;
+  width: 18px;
+  max-height: 20px;
+}
+
+.card-views {
+  margin-left: 6px;
+}
+
+.itc-slider-btn {
+  background-color: unset;
+}
+
+.itc-slider-btn:hover,
+.itc-slider-btn:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.itc-slider-indicators {
+  bottom: 0;
+}
+
+.itc-slider-indicator {
+  background-color: #eee;
+}
+
+.itc-slider-indicator-active {
+  background-color: #757575;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::selection {
+  background: rgb(0, 123, 255, 0.3);
+}
+.content {
+  max-width: 1650px;
+  margin: auto;
+  padding: 0 30px;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  background: #414141;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.navbar .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  width: 50%;
+  height: 50%;
+}
+.navbar .logo a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu-list {
+  display: inline-flex;
+}
+.menu-list li {
+  list-style: none;
+}
+.navbar.sticky .menu-list li a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-list li a {
+  color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+@media (max-width: 1200px) {
+  .menu-list li a {
+    color: white;
+    font-size: 10px;
+    font-weight: 300;
+    margin-left: 25px;
+  }
+}
+.menu-list li a:hover {
+  color: #007bff;
+}
+.banner {
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.banner1 {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.banners {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.banners img {
+  max-width: 100%;
+  height: auto;
+}
+.banner1 img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 1920px) {
+  .banner1 {
+    display: none;
+  }
+  .banners {
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  .banner {
+    display: none;
+  }
+  .banners {
+    display: grid;
+  }
+}
+
+@media (max-width: 550px) {
+  .banner1 {
+    display: grid;
+  }
+  .banners {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .themes {
+    font-size: 1;
+  }
+}
+.about {
+  padding: 30px 0;
+}
+.about .title {
+  font-size: 38px;
+  font-weight: 700;
+}
+.about p {
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body.disabled {
+    overflow: hidden;
+  }
+  .icon {
+    display: block;
+  }
+  .icon.hide {
+    display: none;
+  }
+  .navbar .menu-list {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #222;
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list {
+    left: 0%;
+  }
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a {
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a {
+    font-size: 27px;
+  }
+}
+.footer {
+  background: transparent;
+  padding: 30px 0px;
+  font-family: "Play", sans-serif;
+  text-align: center;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 1em;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  color: #303030;
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+}
+
+.foto img {
+  padding: 10px;
+  height: 242px;
+  width: 350px;
+}
+.dropbtn {
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #414141;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: gray;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #39424b;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+h2 {
+  text-align: center;
+  padding: 3rem;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+}
+/* Slider */
+.slick-slide {
+  margin: 0px 10px;
+}
+.slick-slide img {
+  width: 100%;
+}
+.logotips {
+  display: inline-flexbox;
+}
+.half {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.half img {
+  padding: 2%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  max-width: 450px;
+  max-height: 250px;
+}
+@media (max-width: 900px) {
+  .half img {
+    max-height: 200px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 500px) {
+  .half {
+    display: inline;
+  }
+  .gos img {
+    max-width: 50vh;
+  }
+}
+.gos img {
+  width: 100%;
+  max-height: 200px;
+}
