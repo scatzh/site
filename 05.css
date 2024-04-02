@@ -218,6 +218,7 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
 }
+
 .menu-list li a {
   color: transparent;
   font-size: 16px;
@@ -225,6 +226,14 @@ body {
   margin-left: 25px;
   text-decoration: none;
   transition: all 0.3s ease;
+}
+@media (max-width: 1200px) {
+  .menu-list li a {
+    color: white;
+    font-size: 10px;
+    font-weight: 300;
+    margin-left: 25px;
+  }
 }
 .menu-list li a:hover {
   color: #007bff;
@@ -269,8 +278,7 @@ body {
     display: grid;
   }
 }
-@media (max-width: 800px) {
-}
+
 @media (max-width: 550px) {
   .banner1 {
     display: grid;
