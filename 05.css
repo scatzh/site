@@ -235,19 +235,51 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
-@media (max-width: 1500px) {
-  .gos img {
-    margin-top: 15%;
+.banner1 {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.banners {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.banners img {
+  max-width: 100%;
+  height: auto;
+}
+.banner1 img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 1920px) {
+  .banner1 {
+    display: none;
   }
-  .banner {
+  .banners {
     display: none;
   }
 }
-@media (max-width: 800px) {
-  .gos img {
-    margin-top: 30%;
+@media (max-width: 1400px) {
+  .banner {
+    display: none;
+  }
+  .banners {
+    display: grid;
   }
 }
+@media (max-width: 800px) {
+}
+@media (max-width: 550px) {
+  .banner1 {
+    display: grid;
+  }
+  .banners {
+    display: none;
+  }
+}
+
 @media (max-width: 1300px) {
   .themes {
     font-size: 1;
